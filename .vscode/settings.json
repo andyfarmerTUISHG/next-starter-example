@@ -7,14 +7,22 @@
 	"files.associations": {
 		"*.css" : "tailwindcss"
 	},
+	"[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 	"workbench.editor.customLabels.patterns": {
 		"**/app/**/page.tsx": "${dirname} - Page",
 		"**/app/**/layout.tsx": "${dirname} - Layout",
-		"**/app/**/components/**": "${dirname} - Component"
+		"**/app/**/components/**": "${filename} - Component"
 	},
   "cSpell.words": [
-    "firstname",
-    "fullname",
-    "lastname"
-  ]
+		"firstname",
+		"fullname",
+		"lastname",
+		"nextui",
+		"tabler",
+		"tailwindcss",
+		"trivago",
+		"turbopack"
+	]
 }
