@@ -71,8 +71,8 @@ export default function AppNavBar() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
 
+          <IconPackages />
           <p className="font-bold text-inherit">
-						<IconPackages />
 						{mySiteName}
 					</p>
         </NavbarBrand>
@@ -90,10 +90,11 @@ export default function AppNavBar() {
             </Link>
           </NavbarItem>
         ))}
-				<ThemeSwitcher showLabel={true}/>
+				
       </NavbarContent>
 
       <NavbarContent justify="end">
+        
         <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
         </NavbarItem>
@@ -102,7 +103,9 @@ export default function AppNavBar() {
             Sign Up
           </Button>
         </NavbarItem>
-
+        <NavbarItem>
+          <ThemeSwitcher showLabel={true}/>
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarMenu>
@@ -120,7 +123,9 @@ export default function AppNavBar() {
             </Link>
           </NavbarMenuItem>
         ))}
-				<ThemeSwitcher showLabel={false}/>
+        <NavbarMenuItem>
+          <ThemeSwitcher showLabel={false}/>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
