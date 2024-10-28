@@ -8,7 +8,9 @@ export default function Providers({children} : {children: ReactNode}) {
 	// Define same page navigation rather than full page changes
 	const router = useRouter();
 	return (
-		<NextUIProvider navigate={router.push}>
+		<NextUIProvider
+			navigate={router.push}
+			className="h-full w-full flex flex-col">
 			<NextThemesProvider attribute="class">
 				{children}
 			</NextThemesProvider>

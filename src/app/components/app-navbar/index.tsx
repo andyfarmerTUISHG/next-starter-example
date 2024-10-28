@@ -60,8 +60,9 @@ export default function AppNavBar() {
 
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
+					<IconPackages />
           <p className="font-bold text-inherit">
-						<IconPackages />
+
 							{mySiteName}
 						</p>
         </NavbarBrand>
