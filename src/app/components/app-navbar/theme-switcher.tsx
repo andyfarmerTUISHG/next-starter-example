@@ -26,7 +26,7 @@ export function ThemeSwitcher({ showLabel }: { showLabel?: boolean }) {
       color="success"
       startContent={<IconSun />}
       endContent={<IconMoon />}
-      className="hidden lg:flex"
+
     >
       {showLabel && "Theme"}
     </Switch>

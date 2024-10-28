@@ -103,8 +103,8 @@ export default function AppNavBar() {
             Sign Up
           </Button>
         </NavbarItem>
-        <NavbarItem>
-          <ThemeSwitcher showLabel={true} />
+        <NavbarItem className="hidden lg:flex md:flex">
+          <ThemeSwitcher showLabel={false} />
         </NavbarItem>
       </NavbarContent>
 
@@ -123,9 +123,10 @@ export default function AppNavBar() {
             </Link>
           </NavbarMenuItem>
         ))}
-        <NavbarMenuItem>
-          <ThemeSwitcher showLabel={false} />
-        </NavbarMenuItem>
+				<NavbarMenuItem>
+				<ThemeSwitcher showLabel={true} />
+				</NavbarMenuItem>
+
       </NavbarMenu>
     </Navbar>
   );
