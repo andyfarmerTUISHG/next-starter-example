@@ -24,13 +24,13 @@ export default function RootLayout({
         />
       </head>
       <body className="w-screen h-screen">
-				<Providers>
-					<AppNavBar />
-					<main className="flex-grow">
-						{children}
-					</main>
-				</Providers>
-			</body>
+        <Providers>
+          <AppNavBar />
+          <main className="flex-grow">
+            {children}
+          </main>
+        </Providers>
+      </body>
     </html>
   );
 }

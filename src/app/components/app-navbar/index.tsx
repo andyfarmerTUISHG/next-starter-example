@@ -5,15 +5,15 @@ import { ThemeSwitcher } from "./theme-switcher";
 
 
 export default function AppNavBar() {
-	const mySiteName = "My To Do";
+  const mySiteName = "My To Do";
   const menuItems = [
-		{
-			label: "Home",
-			href: "/	",
-		},{
-			label: "Profile",
-			href: "/profile",
-		},
+    {
+      label: "Home",
+      href: "/	",
+    }, {
+      label: "Profile",
+      href: "/profile",
+    },
     {
       label: "Dashboard",
       href: "/dashboard",
@@ -60,11 +60,11 @@ export default function AppNavBar() {
 
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
-					<IconPackages />
+          <IconPackages />
           <p className="font-bold text-inherit">
 
-							{mySiteName}
-						</p>
+            {mySiteName}
+          </p>
         </NavbarBrand>
       </NavbarContent>
 
@@ -73,10 +73,10 @@ export default function AppNavBar() {
 
           <IconPackages />
           <p className="font-bold text-inherit">
-						{mySiteName}
-					</p>
+            {mySiteName}
+          </p>
         </NavbarBrand>
-				{menuItems.map((item, index) => (
+        {menuItems.map((item, index) => (
           <NavbarItem key={`${item}-${index}`}>
             <Link
               className="w-full"
@@ -90,11 +90,11 @@ export default function AppNavBar() {
             </Link>
           </NavbarItem>
         ))}
-				
+
       </NavbarContent>
 
       <NavbarContent justify="end">
-        
+
         <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
         </NavbarItem>
@@ -104,7 +104,7 @@ export default function AppNavBar() {
           </Button>
         </NavbarItem>
         <NavbarItem>
-          <ThemeSwitcher showLabel={true}/>
+          <ThemeSwitcher showLabel={true} />
         </NavbarItem>
       </NavbarContent>
 
@@ -124,7 +124,7 @@ export default function AppNavBar() {
           </NavbarMenuItem>
         ))}
         <NavbarMenuItem>
-          <ThemeSwitcher showLabel={false}/>
+          <ThemeSwitcher showLabel={false} />
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>

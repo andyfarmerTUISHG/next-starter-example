@@ -4,7 +4,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 
-export default function Providers({children} : {children: ReactNode}) {
+export default function Providers({ children }: { children: ReactNode }) {
 	// Define same page navigation rather than full page changes
 	const router = useRouter();
 	return (

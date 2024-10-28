@@ -12,5 +12,5 @@ export default function useSystemTheme() {
 			setTheme,
 		} as { theme: Theme; setTheme: SetTheme };
 	},
-	[theme, setTheme, systemTheme]);
+		[theme, setTheme, systemTheme]);
 }
