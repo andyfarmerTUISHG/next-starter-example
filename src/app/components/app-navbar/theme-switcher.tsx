@@ -26,7 +26,6 @@ export function ThemeSwitcher({ showLabel }: { showLabel?: boolean }) {
       color="success"
       startContent={<IconSun />}
       endContent={<IconMoon />}
-
     >
       {showLabel && "Theme"}
     </Switch>

@@ -16,10 +16,13 @@
 		"**/app/**/layout.tsx": "${dirname} - Layout",
 		"**/app/**/components/**": "${filename} - Component"
 	},
+	"workbench.sideBar.location": "right",
 	"cSpell.words": [
 		"firstname",
 		"fullname",
+		"getready",
 		"lastname",
+		"nextjs",
 		"nextui",
 		"tabler",
 		"tailwindcss",
