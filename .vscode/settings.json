@@ -17,6 +17,22 @@
 		"**/app/**/components/**": "${filename} - Component"
 	},
 	"workbench.sideBar.location": "right",
+	"editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["[^\\s]*\\.[^\\s]*", "class"],
+    ["[^\\s]*:[^\\s]*", "pseudo-class"],
+    ["[^\\s]*\\[[^\\s]*\\]", "pseudo-class"],
+    ["[^\\s]*\\([^\\s]*\\)", "pseudo-class"],
+    ["[^\\s]*\\{[^\\s]*\\}", "pseudo-class"],
+    ["[^\\s]*\\([^\\s]*\\)", "pseudo-class"]
+  ],
+  "tailwindCSS.includeLanguages": {
+    "typescriptreact": "./**/*.{ts,tsx}",
+    "javascriptreact": "./**/*.{js,jsx}"
+  },
+  "tailwindCSS.configFile": "tailwind.config.js",
 	"cSpell.words": [
 		"firstname",
 		"fullname",
