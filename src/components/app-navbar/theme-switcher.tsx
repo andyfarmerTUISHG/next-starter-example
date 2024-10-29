@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react";
 
-import useSystemTheme from "@/app/hooks/use-system-theme";
 import { Switch } from "@nextui-org/react";
 import { IconMoon, IconSun } from "@tabler/icons-react";
+
+import useSystemTheme from "@/hooks/use-system-theme";
 
 export function ThemeSwitcher({ showLabel }: { showLabel?: boolean }) {
   const [mounted, setMounted] = useState(false);
@@ -26,7 +27,6 @@ export function ThemeSwitcher({ showLabel }: { showLabel?: boolean }) {
       color="success"
       startContent={<IconSun />}
       endContent={<IconMoon />}
-      className="hidden lg:flex"
     >
       {showLabel && "Theme"}
     </Switch>

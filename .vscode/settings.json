@@ -2,20 +2,18 @@
 	"editor.formatOnSave": true,
 	"editor.codeActionsOnSave": {
 		"source.fixAll": "always",
-    "source.organizeImports": "always"
+		"source.organizeImports": "always"
 	},
 	"files.associations": {
-		"*.css" : "tailwindcss"
+		"*.css": "tailwindcss"
 	},
-	"[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+	"typescript.tsdk": "node_modules/typescript/lib",
 	"workbench.editor.customLabels.patterns": {
 		"**/app/**/page.tsx": "${dirname} - Page",
 		"**/app/**/layout.tsx": "${dirname} - Layout",
 		"**/app/**/components/**": "${filename} - Component"
 	},
-  "cSpell.words": [
+	"cSpell.words": [
 		"firstname",
 		"fullname",
 		"lastname",

@@ -1,12 +1,31 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript", "prettier"],
-	"plugins": ["check-file"],
-	"rules": {
-		"prefer-arrow-callback" : ["error"],
-		"prefer-template" : ["error"],
-		"semi": ["error"],
-		"quotes": ["error", "double"],
-		"check-file/filename-naming-convention": [
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "prettier"
+  ],
+  "plugins": [
+    "check-file",
+    "n"
+  ],
+  "rules": {
+    "prefer-arrow-callback": [
+      "error"
+    ],
+    "prefer-template": [
+      "error"
+    ],
+    "semi": [
+      "error"
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "n/no-process-env": [
+      "error"
+    ],
+    "check-file/filename-naming-convention": [
       "error",
       {
         "**/*.{ts,tsx}": "KEBAB_CASE"
@@ -18,8 +37,8 @@
     "check-file/folder-naming-convention": [
       "error",
       {
-        "src/**": "KEBAB_CASE"
+        "src/**/!^[.*": "KEBAB_CASE"
       }
     ]
-	}
+  }
 }
