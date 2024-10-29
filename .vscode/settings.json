@@ -8,6 +8,9 @@
 		"*.css": "tailwindcss"
 	},
 	"typescript.tsdk": "node_modules/typescript/lib",
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"workbench.editor.customLabels.patterns": {
 		"**/app/**/page.tsx": "${dirname} - Page",
 		"**/app/**/layout.tsx": "${dirname} - Layout",
