@@ -4,6 +4,10 @@ import { ZodError, z } from "zod";
 export const env = createEnv({
     server: {
         NODE_ENV: z.enum(["development", "production"]),
+        GOOGLE_CLIENT_ID: z.string(),
+        GOOGLE_CLIENT_SECRET: z.string(),
+        NEXTAUTH_URL: z.string(),
+        NEXTAUTH_SECRET: z.string().min(22),
         // OPEN_AI_API_KEY: z.string().min(1),
     },
 
