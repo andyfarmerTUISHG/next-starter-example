@@ -2,6 +2,7 @@
 import { Button, Card, CardBody } from "@nextui-org/react";
 
 export default function Home() {
+
   return (
 		<Card className="mx-auto max-w-md mt-4">
 			<CardBody className="text-center">

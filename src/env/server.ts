@@ -1,5 +1,5 @@
 import { createEnv } from "@t3-oss/env-nextjs";
-import { z } from "zod";
+import { ZodError, z } from "zod";
 
 export const env = createEnv({
     server: {
@@ -10,7 +10,22 @@ export const env = createEnv({
     // Treat empty strings as undefined.
     emptyStringAsUndefined: true,
     // For Next.js >= 13.4.4, you only need to destructure client variables:
+    // eslint-disable-next-line
     experimental__runtimeEnv: process.env,
+    // Called when the schema validation fails.
+    onValidationError: (error: ZodError) => {
+        console.error(
+            "❌ Invalid environment variables:",
+            error.flatten().fieldErrors
+        );
+        //prevent Zod Stack Trace Message
+        process.exit(1);
+    },
+    // // Called when server variables are accessed on the client.
+    // onInvalidAccess: (variable: string) => {
+    //     throw new Error(
+    //         "❌ Attempted to access a server-side environment variable on the client"
+    //     );
+    // },
 });
 
-console.log(env);
