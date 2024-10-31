@@ -9,6 +9,12 @@ export const env = createEnv({
         NEXTAUTH_URL: z.string(),
         NEXTAUTH_SECRET: z.string().min(22),
         // OPEN_AI_API_KEY: z.string().min(1),
+				DB_HOST: z.string(),
+				DB_USER: z.string(),
+				DB_PASSWORD: z.string(),
+				DB_NAME: z.string(),
+				DB_PORT: z.coerce.number(),
+				DATABASE_URL: z.string().url(),
     },
 
     // Treat empty strings as undefined.

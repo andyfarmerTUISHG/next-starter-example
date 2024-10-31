@@ -34,15 +34,16 @@
   },
   "tailwindCSS.configFile": "tailwind.config.js",
 	"cSpell.words": [
-		"firstname",
-		"fullname",
-		"getready",
-		"lastname",
-		"nextjs",
-		"nextui",
-		"tabler",
-		"tailwindcss",
-		"trivago",
-		"turbopack"
-	]
+    "firstname",
+    "fullname",
+    "getready",
+    "lastname",
+    "NEXTAUTH",
+    "nextjs",
+    "nextui",
+    "tabler",
+    "tailwindcss",
+    "trivago",
+    "turbopack"
+  ]
 }
