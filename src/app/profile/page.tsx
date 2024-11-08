@@ -5,7 +5,7 @@ import options from "../config/auth";
 
 export default async function Profile() {
   const session = await getServerSession(options);
-
+  console.log("session", session);
   return (
     <div className="mx-auto mt-4 max-w-md">
       <h1 className="text-3xl font-bold">Profile {session?.user?.name}</h1>

@@ -1,9 +1,12 @@
+import { env } from "@/env/server";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 
 
 
-const queryClient = postgres(process.env.DATABASE_URL);
-const db = drizzle({ client: queryClient });
+export const client = postgres(env.DATABASE_URL, {
+    max: env.DB_MIGRATING ? 1: undefined
+});
+const db = drizzle({ client });
 
 export default db;
