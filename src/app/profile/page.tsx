@@ -2,9 +2,11 @@ import { Card, CardBody, User } from "@nextui-org/react";
 import { getServerSession } from "next-auth";
 
 import options from "../config/auth";
+import requireAuth from "../utils/require-auth";
 
 export default async function Profile() {
-  const session = await getServerSession(options);
+	await requireAuth();
+  const session = (await getServerSession(options))!;
 
   return (
     <div className="mx-auto mt-4 max-w-md">
@@ -13,11 +15,11 @@ export default async function Profile() {
       <Card className="mt-4">
         <CardBody>
           <User
-            name={session?.user?.name}
-            description={session?.user?.email}
+            name={session.user?.name}
+            description={session.user?.email}
             avatarProps={{
-              showFallback: !session?.user?.image,
-              src: session?.user?.image ? session?.user?.image : "",
+              showFallback: !session.user?.image,
+              src: session.user?.image ? session.user?.image : "",
             }}
           />
         </CardBody>
