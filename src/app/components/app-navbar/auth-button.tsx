@@ -1,13 +1,13 @@
 "use client";
 
 import {
-  Avatar,
-  Button,
-  CircularProgress,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
+	Avatar,
+	Button,
+	CircularProgress,
+	Dropdown,
+	DropdownItem,
+	DropdownMenu,
+	DropdownTrigger,
 } from "@nextui-org/react";
 import { IconBrandGoogle } from "@tabler/icons-react";
 import { signIn, signOut, useSession } from "next-auth/react";
@@ -16,7 +16,7 @@ export default function AuthButton({ minimal = true }: { minimal?: boolean }) {
   const { data, status } = useSession();
 
   if (status === "loading") {
-    return <CircularProgress color="success" size="sm" />;
+    return <CircularProgress color="success" size="sm" aria-label="Loading authentication status..."/>;
   }
   if (status === "authenticated") {
     const signOutClick = () => {

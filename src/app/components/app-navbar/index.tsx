@@ -1,14 +1,14 @@
 "use client";
 
 import {
-  Link,
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
+	Link,
+	Navbar,
+	NavbarBrand,
+	NavbarContent,
+	NavbarItem,
+	NavbarMenu,
+	NavbarMenuItem,
+	NavbarMenuToggle,
 } from "@nextui-org/react";
 import { IconPackages } from "@tabler/icons-react";
 import { useSession } from "next-auth/react";
@@ -104,7 +104,6 @@ export default function AppNavBar() {
         </NavbarItem>
         <NavbarItem>
           <AuthButton minimal={false} />
-          {/* <Link href="#">Login</Link> */}
         </NavbarItem>
       </NavbarContent>
 
