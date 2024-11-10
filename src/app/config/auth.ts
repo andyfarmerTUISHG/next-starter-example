@@ -9,6 +9,14 @@ const options: NextAuthOptions = {
       // https://next-auth.js.org/configuration/pages
       signIn: "/",
     },
+		callbacks: {
+			session: async ({ session, user }) => {
+				if (session.user) {
+					session.user.id = user.id;
+				}
+				return session;
+			},
+		},
     adapter: DrizzleAdapter(db),
     providers: [
       GoogleProvider({
