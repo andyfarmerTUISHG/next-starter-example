@@ -25,7 +25,6 @@ export default function AppNavBar() {
       label: "Home",
       href: "/	",
     },
-
     {
       label: "Dashboard",
       href: "/dashboard",
@@ -64,10 +63,13 @@ export default function AppNavBar() {
     // },
   ];
   if (status === "authenticated") {
-    menuItems.push({
-      label: "Profile",
-      href: "/profile",
-    });
+    menuItems.push(
+      {
+        label: "Guest Book",
+        href: "/guestbook",
+      },
+      { label: "Profile", href: "/profile" }
+    );
   }
 
   return (

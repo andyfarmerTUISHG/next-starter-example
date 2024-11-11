@@ -31,7 +31,7 @@ export default function AuthButton({ minimal = true }: { minimal?: boolean }) {
         </Button>
       );
     }
-    console.dir(data, { depth: null });
+
     return (
       <Dropdown placement="bottom-end">
         <DropdownTrigger>
