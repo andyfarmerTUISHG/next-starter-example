@@ -23,11 +23,11 @@ export async function createGuestBookEntry(prevState: unknown, formData: FormDat
   }
 
 	await db.insert(guestbookEntries).values({
-		id: session?.user.id,
+		userId: session?.user.id,
 		message: submission.value.message
 	});
 
 	//Make sure Next.js revalidate the page and queries the database
 	revalidatePath("/guestbook");
-  redirect("/guestbook");
+  	redirect("/guestbook");
 }
