@@ -10,6 +10,7 @@
     "lint": "next lint",
     "getready": "npm i --legacy-peer-deps",
     "format": "prettier src/ --write",
+    "d:generate": "drizzle-kit generate",
     "db:migrate": "cross-env DB_MIGRATING=true drizzle-kit migrate",
     "drizzle-studio": "drizzle-kit studio"
   },
